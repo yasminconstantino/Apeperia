@@ -1,0 +1,48 @@
+.cabecalho {
+    color: var(--branco);
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*REM é referent ao root, ao fontsize do html e o EM é referente ao tamanho do oroot do elemento; como o fontsize muda em cada navegador, todos os tamanhos em REM ja vão se adaptar automaticamente em cada navegador (meu resumo)*/
+
+    /*REM é uma unidade relativa à propriedade font-size da tag <html>, portanto se a tag <html> tem 16px de font-size 1 REM é equivalente à 16px. EM é relativa à propriedade font-size da tag mãe, portanto se a tag mãe tiver um font-size de 16px 1 EM é equivalente à 16px. (resumo do exercicio)*/
+    
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+
+    border-bottom: 1px solid var(--borda-cabecalho-mobile);
+
+    position: absolute;
+}
+
+.cabecalho__logo {
+    margin-bottom: 1rem;
+}
+
+.cabecalho__navegacao {
+    text-align: center;
+}
+
+.cabecalho__link {
+    font-size: 1.1rem;
+
+    display: inline-block;
+
+    margin-right: .7rem;
+    margin-bottom: 1.25rem;
+    margin-left: .7rem;
+}
+
+@media screen and (min-width: 1024px){
+    .cabecalho {
+        flex-direction: row;
+        justify-content: space-between;
+        border: none;
+    }
+}
